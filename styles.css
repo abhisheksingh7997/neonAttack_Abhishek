@@ -195,7 +195,6 @@ font-size: 52px;
     width: 11%;
     gap: 10px;
     letter-spacing: 2px;
-    /* transition: all 0.2s ease-in-out; */
 
 
 
@@ -206,7 +205,7 @@ font-size: 52px;
   }
 
 .five{
-    /* padding-left: calc((100vw - var(--container_width)) / 2); */
+    
     max-width: 100%;
     padding-right: 0;
     width: 100%;
@@ -278,4 +277,52 @@ font-size: 25px;
     font-family: "Homemade Apple", cursive;
 ;
 }
+.six-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+.sect{
+    background-color: #181717;
+    border: 2px solid black;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    height: 158px;
+    margin: 10px;
+    border-radius: 18px;
+    padding-left: 51px;
+
+}
+.img5{
+    width: 16%;
+  
+    background-color:#181717 ;
+}
+.para1{
+    margin: 0;
+    font-size: 22px;
+    font-family: MontserratSemiBold;
+    font-weight:550;
+    margin: 67px;
+}
+.eight{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+}
+.eight-1{
+    display: flex;
+    flex-direction: row;
+}
+.img7{
+    margin-left: -523px;
+    margin-top: 164px;
+}
+.img8{
+    margin-left: 0px;
+}
+
+
 
