@@ -56,6 +56,36 @@ prevButton.addEventListener('click', showPrevSlide);
 // Automatically show next slide every 5 seconds
 setInterval(showNextSlide, 4000);
 
+// for frequently asked questions .
+let questionsVisible = false;
+
+function toggleQuestions() {
+    const faqs = document.querySelectorAll('.faq');
+    const faqHeaderSign = document.querySelector('.faq-header .plus-sign');
+
+    faqs.forEach(faq => {
+        faq.style.display = questionsVisible ? 'none' : 'block';
+    });
+    faqHeaderSign.style.transform = questionsVisible ? "rotate(0deg)" : "rotate(45deg)";
+    questionsVisible = !questionsVisible;
+}
+
+function toggleAnswer(index) {
+    const answers = document.querySelectorAll('.answer');
+    const plusSigns = document.querySelectorAll('.faq .plus-sign');
+
+    if (answers[index].style.maxHeight) {
+        answers[index].style.maxHeight = null;
+        plusSigns[index].style.transform = "rotate(0deg)";
+    } else {
+        answers.forEach((answer, i) => {
+            answer.style.maxHeight = null;
+            plusSigns[i].style.transform = "rotate(0deg)";
+        });
+        answers[index].style.maxHeight = answers[index].scrollHeight + "px";
+        plusSigns[index].style.transform = "rotate(45deg)";
+    }
+}
 
 
 
