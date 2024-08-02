@@ -88,7 +88,40 @@ function toggleAnswer(index) {
 }
 
 
+const menuLinks = document.querySelectorAll('.pack');
+const cardContainers = document.querySelectorAll('.card-container');
 
+menuLinks.forEach(link => {
+    link.addEventListener('mouseover', () => {
+        const target = link.getAttribute('data-target');
+        
+        cardContainers.forEach(container => {
+            container.style.display = 'none';
+        });
+        
+        document.getElementById(target).style.display = 'flex';
+    });
+
+    link.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            if (![...cardContainers].some(container => container.matches(':hover'))) {
+                cardContainers.forEach(container => {
+                    container.style.display = 'none';
+                });
+            }
+        }, 200);
+    });
+});
+
+cardContainers.forEach(container => {
+    container.addEventListener('mouseleave', () => {
+        container.style.display = 'none';
+    });
+
+    container.addEventListener('mouseover', () => {
+        container.style.display = 'flex';
+    });
+});
 
 
 
