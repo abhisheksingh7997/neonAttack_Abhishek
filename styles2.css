@@ -20,6 +20,51 @@ body {
 
 .container {}
 
+
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+   
+}
+.whatsapp-icon button{
+     width: 99px;
+    border: 1px;
+    cursor: pointer;
+    color: #111111;
+    background-color: #fff;
+    padding: 2px 1px;
+    margin: 10px 6px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #d3d3d3;
+    font-size: 17px;
+    height: 32px;
+    text-decoration: none;
+}
+
+
+.wht{
+    display: flex;
+    flex-direction: row;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgb(26 219 7 / 20%);
+    background: #22CD5B;;
+    border: 2px solid #78e778;
+    box-shadow: 0 0 8px #c2c2c2;
+    
+
+}
+
+
+
+
 .one {
     font-size: 14px;
     font-weight: 900;
@@ -145,9 +190,18 @@ border-radius: 8px;
     margin-left: 270px;
     margin-top: 20px;
 }
+.icon-chevron-down {
 
+    width: 0.5em;
+    height: 0.5em;
+    margin-left: 0.5rem;
+
+}
 .fa-regular {
     margin-top: 9px;
+}
+.block_arrow_image {
+    margin-left: 58px;
 }
 
 
@@ -339,7 +393,7 @@ border-radius: 8px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    overflow: scroll;
+    /* overflow: scroll; */
     position: relative;
     scrollbar-width: none;
     border: 0px solid rgb(0, 0, 0);
@@ -358,11 +412,13 @@ border-radius: 8px;
     /* Firefox */
     -ms-overflow-style: none;
     /* IE and Edge */
+    
 }
 
 .section-7 {
     display: block;
     box-sizing: border-box;
+    margin-top: -123px;
 }
 
 
@@ -370,14 +426,22 @@ border-radius: 8px;
     display: none;
     /* Safari and Chrome */
 }
-
+.paragraph{
+    margin-top: 14px;
+    font-weight: bold;
+}
 
 .grid {
     border-radius: 2px;
     width: 100%;
     height: 100%;
-
-
+    margin-bottom: 55px !important;
+    display: flex;
+    flex-direction: column;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 35px;
+    list-style: none;
+    padding: 0;
 }
 
 
@@ -710,13 +774,15 @@ border-radius: 8px;
 }
 
 .wrapper i:first-child {
-    left: 172px;
-    top: 4443px;
+    
+    margin-left: -82px;
+    margin-top: 157px;
 }
 
+
 .wrapper i:last-child {
-    right: 220px;
-    top: 4456px;
+    margin-left: 52em;
+    margin-top:-199px;
 }
 
 .wrapper .carousel {
@@ -780,17 +846,6 @@ border-radius: 8px;
 }
 
 
-.grid {
-    margin-bottom: 55px !important;
-    display: flex;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    overflow: auto;
-    margin-bottom: 35px;
-    list-style: none;
-    padding: 0;
-}
 
 .thirteen {
     display: flex;
