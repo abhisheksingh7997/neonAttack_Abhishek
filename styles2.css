@@ -19,6 +19,46 @@ body {
 }
 
 .container {}
+#notificationBanner {
+    background-color: rgb(200, 0, 0);;
+    color: rgb(255, 210, 73);
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#countdown {
+    margin-left: 10px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#countdown span {
+    margin: 0 5px;
+    font-size: 24px;
+}
+
+#closeButton {
+    font-size: 27px;
+    color: rgb(255, 210, 73);
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+#hours ,#minutes ,#seconds{
+    border: 1px solid rgb(128,11,11);
+    border-radius: 8px;
+    outline: 1px solid transparent;
+    padding: 3px;
+}
 
 
 
@@ -28,6 +68,9 @@ body {
     right: 20px;
     z-index: 1000;
    
+}
+.whatsapp-icon a {
+    text-decoration: none;
 }
 .whatsapp-icon button{
      width: 99px;
@@ -61,17 +104,22 @@ body {
     
 
 }
+.google {
+    display: flex;
+    justify-content: space-around;
+
+}
 
 
 
 
 .one {
-    font-size: 14px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 700;
     text-align: center;
     margin-top: 2vh;
     line-height: normal;
-    color: rgb(23, 221, 126);
+    color:#e6a43a;
     margin-bottom: 2vh;
 }
 
@@ -86,7 +134,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 30px;
     color: rgb(255, 255, 255);
     padding: 4px;
@@ -116,6 +164,8 @@ body {
 
 .logo {
     margin-left: 36px;
+    cursor: pointer;
+
 }
 
 .content {
@@ -189,6 +239,7 @@ border-radius: 8px;
     height: 32px;
     margin-left: 270px;
     margin-top: 20px;
+    cursor: pointer;
 }
 .icon-chevron-down {
 
@@ -294,7 +345,9 @@ border-radius: 8px;
     flex-wrap: wrap;
 
 }
-
+.five a {
+    text-decoration: none;
+}
 .discp {
     letter-spacing: 0px;
     color: #ffffff;
@@ -419,6 +472,7 @@ border-radius: 8px;
     display: block;
     box-sizing: border-box;
     margin-top: -123px;
+    cursor: pointer;
 }
 
 
@@ -429,6 +483,7 @@ border-radius: 8px;
 .paragraph{
     margin-top: 14px;
     font-weight: bold;
+    text-align: center;
 }
 
 .grid {
@@ -509,7 +564,7 @@ border-radius: 8px;
     width: 60%;
     font-size: 19px;
     margin-top: 33px;
-    margin-left: 6px;
+    margin-left: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -517,7 +572,7 @@ border-radius: 8px;
     width: 60%;
     font-size: 19px;
     margin-top: 33px;
-    margin-left: 6px;
+    margin-left: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -526,7 +581,7 @@ border-radius: 8px;
     font-size: 16px;
     line-height: 1.6;
     padding: 12px 55px;
-    color: #17dd7e;
+    color: white;
     border: solid 2px #17dd7e;
     text-decoration: none;
     font-family: Montserrat, sans-serif;
@@ -534,10 +589,11 @@ border-radius: 8px;
     font-weight: 700;
     letter-spacing: 1px;
     display: inline-block;
-    width: 40%;
+    width: 100%;
     margin-top: 62px;
-    margin-left: 28px;
+    margin-left: 43px;
     background-color: #000;
+    cursor: pointer;
 }
 
 .btn-2:hover {
@@ -723,10 +779,12 @@ border-radius: 8px;
     justify-content: center;
     flex-direction: column;
     scroll-snap-align: start;
+    cursor: pointer;
 }
 .card{
     width: 331px;
     margin-right: -52px;
+    text-decoration: none;
 }
 .carousel.dragging .card {
     cursor: grab;
@@ -739,6 +797,9 @@ border-radius: 8px;
     height: 148px;
     border-radius: 18px;
 }
+.carousel a {
+    text-decoration: none;
+}
 
 .card .img img {
     width: 250px;
@@ -747,9 +808,7 @@ border-radius: 8px;
     border-radius: 18px;
     border: 4px solid black;
 }
-.card:hover {
-    text-decoration: underline;
-}
+
 
 .wrapper {
     max-width: 800px;
@@ -794,7 +853,6 @@ border-radius: 8px;
     scroll-snap-type: x mandatory;
     scrollbar-width: 0;
     scroll-behavior: smooth;
-    scrollbar-color: #8E24AA;
 }
 .carousel{
     width: 990px;
@@ -821,29 +879,39 @@ border-radius: 8px;
 .product-name {
     font-size: 16px;
     margin: 10px 0;
+    color: #fff;
+    text-decoration-line: none;
+}
+.product-name:hover{
+    text-decoration: underline;
 }
 
 .product-price {
     font-size: 14px;
     color: #8E24AA;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .original-price {
     text-decoration: line-through;
     color: #AAA;
+
 }
 
 .sale-badge {
     background-color: #8E24AA;
-    color: white;
+    color: black;
     padding: 5px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: relative;
     border-radius: 5px;
     font-size: 12px;
+    margin-top:-22px;
+    margin-left: -166px;
+    font-weight: 500;
+    text-decoration: none;
 }
+
 
 
 
@@ -1164,16 +1232,21 @@ border-radius: 8px;
     margin-left: 4em;
     letter-spacing: 1px;
     padding: 2px;
+    line-height: 22px;
+
 
 }
 
 .answer p {
     margin: 10px 0;
     margin-left: 1em;
+    color: #e1dbdb;
 }
 
 .answer li {
     margin-left: 2em;
+    color: #e1dbdb;
+
 
 }
 
