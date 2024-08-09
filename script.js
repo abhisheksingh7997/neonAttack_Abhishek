@@ -1,32 +1,32 @@
 const carousel = document.querySelector(".carousel");
 const arrowBtns = document.querySelectorAll(".wrapper i");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
-let isDragging = false,startX,startScrollLeft;
+let isDragging = false, startX, startScrollLeft;
 //Add event listeners for the buttons to scroll the carousel left and right
-arrowBtns.forEach(btn=>{
-    btn.addEventListener("click",()=>{
-carousel.scrollLeft +=btn.id ==="left"? -firstCardWidth : firstCardWidth ;
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
     })
 })
 const dragStart = (e) => {
-    isDragging = true ;
-  carousel.classList.add("dragging");
+    isDragging = true;
+    carousel.classList.add("dragging");
     // Records the initial cursor and scroll position of the carousel
-    startX =e.pageX;
-    startScrollLeft =carousel.scrollLeft;
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
 }
-const dragging =(e)=>{
-    if(!isDragging) return; //if isDragging is false return from here 
+const dragging = (e) => {
+    if (!isDragging) return; //if isDragging is false return from here 
     // Updates the scroll position of the carousel based on the cursor movement 
-    carousel.scrollLeft = startScrollLeft - (e.pageX -startX) ;
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
 }
-const dragStop=()=>{
-    isDragging=false;
+const dragStop = () => {
+    isDragging = false;
     carousel.classList.remove("dragging");
 }
-carousel.addEventListener("mousedown",dragStart);
-carousel.addEventListener("mousemove",dragging);
-document.addEventListener("mouseup",dragStop);
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
 
 
 
@@ -87,18 +87,18 @@ function toggleAnswer(index) {
     }
 }
 
-
+// for sliding hovers
 const menuLinks = document.querySelectorAll('.pack');
 const cardContainers = document.querySelectorAll('.card-container');
 
 menuLinks.forEach(link => {
     link.addEventListener('mouseover', () => {
         const target = link.getAttribute('data-target');
-        
+
         cardContainers.forEach(container => {
             container.style.display = 'none';
         });
-        
+
         document.getElementById(target).style.display = 'flex';
     });
 
@@ -109,7 +109,7 @@ menuLinks.forEach(link => {
                     container.style.display = 'none';
                 });
             }
-        }, 200);
+        }, 100);
     });
 });
 
@@ -123,21 +123,35 @@ cardContainers.forEach(container => {
     });
 });
 
+// for countdown timer at top
+document.addEventListener("DOMContentLoaded", function () {
+    // Set the end time for the countdown (for example, 7 hours from now)
+    let endTime = new Date().getTime() + (7 * 60 * 60 * 1000);
 
+    // Update the countdown every second
+    let countdownTimer = setInterval(function () {
+        let now = new Date().getTime();
+        let timeLeft = endTime - now;
 
+        // Calculate hours, minutes, and seconds
+        let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
+        // Display the result in the respective elements
+        document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
 
+        // If the countdown is over, clear the interval
+        if (timeLeft < 0) {
+            clearInterval(countdownTimer);
+            document.getElementById("countdown").textContent = "EXPIRED";
+        }
+    }, 1000);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Close the notification banner
+    document.getElementById("closeButton").onclick = function () {
+        document.getElementById("notificationBanner").style.display = "none";
+    };
+});
