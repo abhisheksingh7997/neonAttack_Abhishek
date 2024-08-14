@@ -250,6 +250,7 @@ border-radius: 8px;
 }
 .fa-regular {
     margin-top: 9px;
+    color: #fff;
 }
 .block_arrow_image {
     margin-left: 58px;
@@ -1321,6 +1322,8 @@ input::placeholder {
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
+    margin-top: 10px;
+    height: 43px;
 }
 
 .footer-middle {
