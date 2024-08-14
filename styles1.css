@@ -1,0 +1,125 @@
+
+
+nav {
+    margin: 20px;
+    font-size: 0.8rem;
+    padding-left: 32px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-container {
+    margin: 100px auto;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: -36px;
+    
+}
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1 {
+    color:#9200f7;
+
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 1rem;
+}
+
+input[type="email"], input[type="password"] ,input[type="text"]{
+    width: 128%;
+    padding: 13px;
+    margin: 10px 0 20px;
+    border-radius: 2px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.forgot-password {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+
+.login-btn:hover {
+    color:#fff;
+    cursor: pointer;
+}
+
+.create-account {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 23px;
+    display: inline-block;
+}
+/* Search bar container hidden by default */
+#searchBarContainer {
+    display: none;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Wrapper for search bar and close button */
+.search-bar-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+/* Styling the search bar input */
+#searchBar {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #9200f7;;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Close button */
+.close-btn {
+   position: absolute;
+    right: -34px;
+    top: 44%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 42px;
+    color: #fff;
+}
+
+/* Focus effect */
+#searchBar:focus {
+    border-color: #007BFF;
+    outline: none;
+    width: 350px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button hover effect */
+.close-btn:hover {
+    color: #ff0000;
+}
+
+
